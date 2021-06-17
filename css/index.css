@@ -1,0 +1,136 @@
+@font-face {
+    font-family: 'varela_roundregular';
+    src: url('fonts/varelaround-regular-webfont.woff2') format('woff2'),
+         url('fonts/varelaround-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    font-family: 'varela_roundregular';
+    font-size: 16px;
+    line-height: 24px;
+    color: #313131;
+    background-color: rgb(246, 254, 255);
+    display: inline-block;
+}
+
+.heading {
+    color:rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+/* section {
+    margin-top:2em;
+} */
+
+.experience {
+    background-color: rgb(235, 235, 235);
+    border-radius: 5px;
+    padding: 5px;
+    display: inline-box;
+}
+
+.skill {
+    color: blue;
+    background-color: rgb(255, 255, 255, 0);
+    border: 1px solid blue;
+    border-radius: 5px;
+    margin-right: 0.5em;
+    padding: 5px;
+    display: inline-box;
+}
+
+h2 {
+    font-size: 15px;
+}
+
+label {
+    font-size: 12px;
+}
+
+button {
+    font-size: 16px;
+    padding: 5px;
+    border: 0px;
+    border-radius: 5px;
+}
+
+.submitButton {
+    background-color:lightskyblue;
+    border-radius: 5px;
+}
+
+.submitButton:hover {
+    background-color: lightblue;
+    border-radius: 5px;
+}
+
+#editButton {
+    background-color:papayawhip;
+    margin-right: 0.5em;
+}
+
+#editButton:hover {
+    background-color:rgb(255, 247, 234);
+    margin-right: 0.5em;
+}
+
+#removeButton {
+    background-color: coral;
+    border-radius: 5px;
+}
+
+#removeButton:hover {
+    background-color: rgb(255, 160, 125);
+    border-radius: 5px;
+}
+
+footer {
+    font-size: 12px;
+    background-color:rgb(217, 244, 254);
+    margin-top: 4em;
+    padding-left: 5px;
+    padding-top: 5px;
+    display: inline-block;
+}
+
+ul.social_icons, li.social {
+    padding-left:5px;
+    padding-right:5px;
+    max-width:25%;
+    list-style: none;
+    float:right;
+    text-decoration:none;
+    display:inline-block;
+    position: relative;
+}
+
+@media screen and (max-width: 480px) {
+    
+    .experience {
+        width: 100%;
+    }
+    
+    input {
+        width: 100%;
+    }
+
+    textarea {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    
+}
+
+@media screen and (max-width: 1024px) {
+    
+}
+
+@media screen and (max-width: 1200px) {
+    
+}

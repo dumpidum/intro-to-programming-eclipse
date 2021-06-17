@@ -3,45 +3,54 @@
     <head>
         <title>Ignat's portfolio</title>
         <meta charset="UTF-8">
+        <link rel='stylesheet' href='css/index.css'>
     </head>
        <body>
-            Ignat Babenko
+            <h1 class='heading'>Ignat Babenko</h1>
             <section>
-                <h1>About</h1>
+                <h1 class='heading'>About</h1>
                 <p>Junior software developer</p>
+                <p>Pronouns: he/him</p>
             </section>
             <section>
-                <h1>Experience</h1>
-                <p>Code The Dream bootcamp</p>
+                <h1 class='heading'>Experience</h1>
+                <p class='experience'>&quotCode The Dream&quot student 2021</p>
+                <p class='experience'>Target Labs, QA engineer 2015-2021</p>
+                <p class='experience'>Gazprom transgaz Yekaterinburg, procurement manager 2006-2014</p>
             </section>
             <section id='skills'>
-                <h2>Skills</h2>
-                <ul></ul>
+                <h1 class='heading'>Skills</h1>
             </section>
+           
             <section>
-                <h1>Connect</h1>
-                <ul>
-                    <li>dumpidum@gmail.com</li>
-                    <li>https://github.com/dumpidum</li>
-                </ul>
-            </section>
-            <section>
-                <h2>Leave a Message</h2>
-                <form name='leave_message'>
-                    <label for='name'>Name</label><br>
+                <h2 class='heading'>Leave a Message</h2>
+                <form class='form' id='leave_message'>
+                    <label class='label' for='name'>Name</label><br>
                     <input type='text' name='name' required=true><br>
-                    <label for='email'>E-mail</label><br>
+                    <label class='label' for='email'>E-mail</label><br>
                     <input type='email' name='email' required=true><br>
-                    <label for='message'>Message</label><br>
+                    <label class='label' for='message'>Message</label><br>
                     <textarea name='message' required=true></textarea><br>
-                    <button type='submit'>Submit</button><br>
+                    <button class='submitButton' type='submit'>Submit</button><br>
                 </form>
             </section>
             <section id='messages'>
-                <h2>Messages</h2>
+                <h2 class='heading'>Messages</h2>
                 <ul></ul>
             </section>
-            <footer></footer>
+            <footer>
+                <ul class="social_icons">
+                    <li class="social">
+                        <a href='' target="_blank "><img src='img/linkedin.svg'></a>
+                    </li>
+                    <li class="social">
+                        <a href='https://github.com/dumpidum' target="_blank"><img src='img/github.svg'></a>
+                    </li>
+                    <li class="social">
+                        <a href='mailto:dumpidum@gmail.com' target="_blank"><img src='img/mail.svg'></a>
+                    </li>
+                </ul>
+            </footer>
             <script src='js/index.js'></script>
         </body>
 </html>
