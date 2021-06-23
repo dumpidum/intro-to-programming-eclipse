@@ -1,56 +1,59 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Ignat's portfolio</title>
-        <meta charset="UTF-8">
-        <link rel='stylesheet' href='css/index.css'>
-    </head>
-       <body>
+
+<head>
+    <title>Ignat's portfolio</title>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' href='css/index.css'>
+    <link rel='stylesheet' href='css/grid.css'>
+</head>
+
+<body>
+    <div class='container'>
+        <header>
             <h1 class='heading'>Ignat Babenko</h1>
-            <section>
-                <h1 class='heading'>About</h1>
-                <p>Junior software developer</p>
-                <p>Pronouns: he/him</p>
-            </section>
-            <section>
-                <h1 class='heading'>Experience</h1>
-                <p class='experience'>&quotCode The Dream&quot student 2021</p>
-                <p class='experience'>Target Labs, QA engineer 2015-2021</p>
-                <p class='experience'>Gazprom transgaz Yekaterinburg, procurement manager 2006-2014</p>
-            </section>
-            <section id='skills'>
-                <h1 class='heading'>Skills</h1>
-            </section>
-           
-            <section>
-                <h2 class='heading'>Leave a Message</h2>
-                <form class='form' id='leave_message'>
-                    <label class='label' for='name'>Name</label><br>
-                    <input type='text' name='name' required=true><br>
-                    <label class='label' for='email'>E-mail</label><br>
-                    <input type='email' name='email' required=true><br>
-                    <label class='label' for='message'>Message</label><br>
-                    <textarea name='message' required=true></textarea><br>
-                    <button class='submitButton' type='submit'>Submit</button><br>
-                </form>
-            </section>
-            <section id='messages'>
-                <h2 class='heading'>Messages</h2>
-                <ul></ul>
-            </section>
-            <footer>
-                <ul class="social_icons">
-                    <li class="social">
-                        <a href='' target="_blank "><img src='img/linkedin.svg'></a>
-                    </li>
-                    <li class="social">
-                        <a href='https://github.com/dumpidum' target="_blank"><img src='img/github.svg'></a>
-                    </li>
-                    <li class="social">
-                        <a href='mailto:dumpidum@gmail.com' target="_blank"><img src='img/mail.svg'></a>
-                    </li>
-                </ul>
-            </footer>
-            <script src='js/index.js'></script>
-        </body>
+        </header>
+        <nav style='text-align: center'>
+            <a href='#anchor-about' style='text-decoration: none'>ABOUT</a> | <a href='#anchor-experience' style='text-decoration: none'>EXPERIENCE</a> | <a href='#anchor-skills' style='text-decoration: none'>SKILLS</a>
+        </nav>
+        <section id='about'>
+            <h1 class='heading' id='anchor-about'>About</h1>
+            <p>Junior software developer</p>
+            <p>Pronouns: he/him</p>
+        </section>
+        <section id='experience'>
+            <h1 class='heading' id='anchor-experience'>Experience</h1>
+            <p class='experience'>&quotCode The Dream&quot student 2021</p>
+            <p class='experience'>Target Labs, QA engineer 2015-2021</p>
+            <p class='experience'>Gazprom transgaz Yekaterinburg, procurement manager 2006-2014</p>
+        </section>
+        <section id='skills'>
+            <h1 class='heading' id='anchor-skills'>Skills</h1>
+        </section>
+
+        <section id="message_form">
+            <h2 class='heading'>Leave a Message</h2>
+            <form class='form' id='leave_message'>
+                <label class='label' for='name'>Name</label><br>
+                <input type='text' name='name' required=true><br>
+                <label class='label' for='email'>E-mail</label><br>
+                <input type='email' name='email' required=true><br>
+                <label class='label' for='message'>Message</label><br>
+                <textarea name='message' required=true></textarea><br>
+                <button class='submitButton' type='submit'>Submit</button><br>
+            </form>
+        </section>
+        <section id='messages'>
+            <h2 class='heading'>Messages</h2>
+            <ul></ul>
+        </section>
+        <footer>
+            <a href='' target="_blank "><img src='img/linkedin.svg' style='align-content: right'></a>
+            <a href='https://github.com/dumpidum' target="_blank"><img src='img/github.svg' style='align-content: right'></a>
+            <a href='mailto:dumpidum@gmail.com' target="_blank"><img src='img/mail.svg' style='align-content: right'></a>
+        </footer>
+    </div>
+    <script src='js/index.js'></script>
+</body>
+
 </html>
