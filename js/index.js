@@ -4,9 +4,11 @@ let thisYear = today.getFullYear();
 let footer = document.querySelector('footer');
 let copyright = document.createElement('p');
 copyright.innerHTML = `&copy; Ignat Babenko, ` + thisYear;
+copyright.style.alignContent = 'right';
 let contacts = document.createElement('span');
-footer.appendChild(copyright);
-footer.style.width = '100%';
+footer.prepend(copyright);
+footer.style.width = '100%'
+footer.style.alignItems = 'right';
 
 //adding 'Skills' section
 let skills = ['JavaScript', 'HTML', 'CSS'];
@@ -21,6 +23,7 @@ for (let i = 0; i < skills.length; i++) {
 // lesson 4-3
 let messageSection = document.getElementById('messages');
 let messageList = messageSection.querySelector('ul');
+
 
 const messageForm = document.getElementById('leave_message');
 messageForm.addEventListener('submit', (event) => {
@@ -88,9 +91,9 @@ messageList.addEventListener('click', (event) => {
 //     removeButton.addEventListener('click', (event) => {
 //     let entry = event.target.parentNode;
 //     let list = message.parentNode;
+    // if (messageList.childNodes.length <= 1) {
+    // messageSection.style.display = 'none';
+    // }
 
-//     // if (list.childNodes.length <= 1) {
-//     //     messageSection.style.display = 'none';
-//     // }
 
 //     entry.remove();
