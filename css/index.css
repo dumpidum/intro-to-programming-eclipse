@@ -11,10 +11,38 @@
 body {
     font-family: 'varela_roundregular';
     font-size: 16px;
-    line-height: 24px;
-    color: #313131;
+    line-height: 2em;
+    background-color:rgb(217, 244, 254);
+    margin:5px
+}
+
+section {
     background-color: rgb(246, 254, 255);
-    display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: justify;
+    margin: 5px;
+}
+
+.container {
+    flex-grow: 1;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: rgb(246, 254, 255);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;    
+}
+#avatar {
+    /* object-fit: cover; */
+    justify-self: left;
+    border-radius:50%;
+    width: 100px;
+    height: 100px;
+    margin-right: 7px;
 }
 
 .heading {
@@ -25,12 +53,20 @@ body {
 /* section {
     margin-top:2em;
 } */
+nav {
+    display: flex;
+    position: sticky;
+    top: 0;
+    justify-content: space-around;
+    background-color:rgb(217, 244, 254);
+}
 
 .experience {
+    align-content: initial;
     background-color: rgb(235, 235, 235);
+    border: 1px;
     border-radius: 5px;
     padding: 5px;
-    display: inline-box;
 }
 
 .skill {
@@ -38,19 +74,35 @@ body {
     background-color: rgb(255, 255, 255, 0);
     border: 1px solid blue;
     border-radius: 5px;
-    margin-right: 0.5em;
+    margin-right: 10px;
     padding: 5px;
-    display: inline-box;
+    display: inline-block;
+}
+
+#skills {
+    flex-wrap: wrap;
 }
 
 h2 {
     font-size: 15px;
 }
 
-label {
-    font-size: 12px;
+form {
+    padding: 10px;
 }
 
+label {
+    font-size: 13px;
+}
+
+input {
+    width: ;
+}
+
+textarea {
+    width:fit-content;
+    height: 100px;
+}
 button {
     font-size: 16px;
     padding: 5px;
@@ -69,12 +121,12 @@ button {
 }
 
 #editButton {
-    background-color:papayawhip;
+    background-color:rgb(255, 224, 173);
     margin-right: 0.5em;
 }
 
 #editButton:hover {
-    background-color:rgb(255, 247, 234);
+    background-color:papayawhip;
     margin-right: 0.5em;
 }
 
@@ -89,23 +141,14 @@ button {
 }
 
 footer {
+    display: flex;
+    align-items: center;
     font-size: 12px;
     background-color:rgb(217, 244, 254);
-    margin-top: 4em;
-    padding-left: 5px;
-    padding-top: 5px;
-    /* display: inline-block; */
 }
 
-ul.social_icons, li.social {
-    padding-left:5px;
-    padding-right:5px;
-    max-width:25%;
-    list-style: none;
-    /* float: right; */
-    text-decoration: none;
-    display: inline-block;
-    position: relative;
+.social_icons {
+    padding: 10px;
 }
 
 /* @media screen and (max-width: 480px) {

@@ -4,17 +4,16 @@ let thisYear = today.getFullYear();
 let footer = document.querySelector('footer');
 let copyright = document.createElement('p');
 copyright.innerHTML = `&copy; Ignat Babenko, ` + thisYear;
-copyright.style.alignContent = 'right';
+copyright.style.padding = '10px';
+copyright.style.marginLeft = 'auto';
 let contacts = document.createElement('span');
-footer.prepend(copyright);
-footer.style.width = '100%'
-footer.style.alignItems = 'right';
+footer.appendChild(copyright);
 
 //adding 'Skills' section
 let skills = ['JavaScript', 'HTML', 'CSS'];
 let skillsSection = document.getElementById('skills');
 for (let i = 0; i < skills.length; i++) {
-    let skill = document.createElement('span');
+    let skill = document.createElement('p');
     skill.textContent = skills[i];
     skill.className = 'skill';
     skillsSection.appendChild(skill);
@@ -53,7 +52,7 @@ messageForm.addEventListener('submit', (event) => {
     newMessage.appendChild(editButton);
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
-
+    document.getElementById('messages').style.display = 'inline';
     event.target.reset();
 })
 
@@ -68,6 +67,9 @@ messageList.addEventListener('click', (event) => {
         let li = event.target.parentNode;
         if (event.target.textContent === 'remove') {
             messageList.removeChild(li);
+            if (messageList.childElementCount === 0) {
+                document.getElementById('messages').style.display = 'none';
+            }
         } else if (event.target.textContent === 'edit') {
             let span = li.querySelector('span');
             let input = document.createElement('input');
