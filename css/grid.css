@@ -1,9 +1,9 @@
 .container {
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
     grid-auto-rows: auto;
-    grid-gap: 30px;
+    /* grid-gap: 10px; */
     grid-template-areas:
         "header"
         "nav"
@@ -17,41 +17,47 @@
 
 header {
     grid-area: header;
-    /* position: fixed;
-    width: 100%;
-    background-color: rgb(246, 254, 255); */
 }
+
 nav {
     grid-area: nav;
+    margin: 5px;
 }
+
 #about {
     grid-area: about;
 }
+
 #experience {
     grid-area: experience;
 }
+
 #skills {
     grid-area: skills;
 }
+
 #message_form {
     grid-area: message_form;
 }
+
 #messages {
     grid-area: messages;
+    display: none;
 }
+
 footer {
     grid-area: footer;
 }
 
 @media (min-width: 768px) {
     .container {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 100px 50px repeat(3, minmax(150px, auto)) 50px;
+        grid-template-columns: 3fr 2fr 1fr;
+        grid-template-rows: auto auto 2fr 1fr auto 60px;
         grid-template-areas:
             "header header header"
             "nav nav nav"
             "about experience skills"
-            "message_form message_form ..."
+            "message_form experience skills"
             "messages messages messages"
             "footer footer footer";
     }
