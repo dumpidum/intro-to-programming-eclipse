@@ -89,6 +89,33 @@ messageList.addEventListener('click', (event) => {
     }
 })
 
+var githubRequest = new XMLHttpRequest();
+githubRequest.open('GET', 'https://api.github.com/users/dumpidum/repos');
+githubRequest.send();
+githubRequest.addEventListener('load', () => {
+    let repositories = JSON.parse(githubRequest.response);
+    console.log(repositories);
+    let projectSection = document.getElementById('projects');
+    
+    for (let i = 0; i < repositories.length; i++) {
+        let project = document.createElement('p');
+        project.className='project';
+        project.innerHTML=`<a href='${repositories[i].html_url}' target='_blank'>${repositories[i].name}</a> created at ${repositories[i].created_at.slice(0,10)}`;
+        projectSection.appendChild(project);
+    }
+})
+
+
+
+
+
+
+
+
+
+
+
+
 
 //     removeButton.addEventListener('click', (event) => {
 //     let entry = event.target.parentNode;

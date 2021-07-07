@@ -10,6 +10,7 @@
         "about"
         "experience"
         "skills"
+        "projects"
         "message_form"
         "messages"
         "footer";
@@ -44,6 +45,9 @@ nav {
     grid-area: messages;
     display: none;
 }
+#projects {
+    grid-area: projects;
+}
 
 footer {
     grid-area: footer;
@@ -57,7 +61,7 @@ footer {
             "header header header"
             "nav nav nav"
             "about experience skills"
-            "message_form experience skills"
+            "message_form projects projects"
             "messages messages messages"
             "footer footer footer";
     }

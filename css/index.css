@@ -83,6 +83,14 @@ nav {
     flex-wrap: wrap;
 }
 
+.project {
+    align-content: initial;
+    background-color: rgb(235, 235, 235);
+    border: 1px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
 h2 {
     font-size: 15px;
 }
