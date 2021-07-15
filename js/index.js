@@ -89,24 +89,46 @@ messageList.addEventListener('click', (event) => {
     }
 })
 
-var githubRequest = new XMLHttpRequest();
-githubRequest.open('GET', 'https://api.github.com/users/dumpidum/repos');
-githubRequest.send();
-githubRequest.addEventListener('load', () => {
-    let repositories = JSON.parse(githubRequest.response);
-    console.log(repositories);
-    let projectSection = document.getElementById('projects');
+// var githubRequest = new XMLHttpRequest();
+// githubRequest.open('GET', 'https://api.github.com/users/dumpidum/repos');
+// githubRequest.send();
+// githubRequest.addEventListener('load', () => {
+//     let repositories = JSON.parse(githubRequest.response);
+//     let projectSection = document.getElementById('projects');
     
-    for (let i = 0; i < repositories.length; i++) {
+//     for (let i = 0; i < repositories.length; i++) {
+//         let project = document.createElement('p');
+//         project.className='project';
+//         project.innerHTML=`<a href='${repositories[i].html_url}' target='_blank'>${repositories[i].name}</a> created at ${repositories[i].created_at.slice(0,10)}`;
+//         projectSection.appendChild(project);
+//     }
+    
+// })
+
+fetch('https://api.github.com/users/dumpidum/repos')
+    .then(response => {
+        if (!response.ok) {
+            console.log (response);
+            throw new Error ('A network error occured');
+        } else {
+            return response.json();
+        }
+    })
+    .then(data => {
+            let projectSection = document.getElementById('projects');            
+            for (let i = 0; i < data.length; i++) {
+                let project = document.createElement('p');
+                project.className='project';
+                project.innerHTML=`<a href='${data[i].html_url}' target='_blank'>${data[i].name}</a> created on ${data[i].created_at.slice(0,10)}`;
+                projectSection.appendChild(project);
+            }
+    })
+    .catch(error => {
+        let projectSection = document.getElementById('projects');
         let project = document.createElement('p');
-        project.className='project';
-        project.innerHTML=`<a href='${repositories[i].html_url}' target='_blank'>${repositories[i].name}</a> created at ${repositories[i].created_at.slice(0,10)}`;
+        project.innerText = 'Could not fetch data';
         projectSection.appendChild(project);
-    }
-})
-
-
-
+    })
 
 
 
