@@ -30,6 +30,7 @@ section {
 
 header {
     display: flex;
+    position: static;
     align-items: center;
     background-color: rgb(246, 254, 255);
     padding: 10px;
