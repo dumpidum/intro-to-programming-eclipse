@@ -3,64 +3,83 @@
 
 <head>
     <title>Ignat's portfolio</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <link rel='stylesheet' href='css/index.css'>
     <link rel='stylesheet' href='css/grid.css'>
 </head>
 
 <body>
+    <button onclick="topFunction()" id="topButton" title="Go to top">&#x21e7;</button>
+ 
     <div class='container'>
         <header>
             <img id='avatar' alt='Ignat Babenko' src='img/ignat_avatar.jpeg'>
-            <h1 class='heading' style='color:rgb(190, 235, 252)'>Ignat Babenko</h1>
+            <h1 class='heading'>Ignat Babenko</h1>
         </header>
+
         <nav>
-            <a href='#about' style='text-decoration: none'>ABOUT</a>|
-            <a href='#experience' style='text-decoration: none'>EXPERIENCE</a>|
-            <a href='#skills' style='text-decoration: none'>SKILLS</a>|
-            <a href='#projects' style='text-decoration: none'>PROJECTS</a>
+            <a href='#about' style='text-decoration: none'>About</a>|
+            <a href='#experience' style='text-decoration: none'>Experience</a>|
+            <a href='#skills' style='text-decoration: none'>Skills</a>|
+            <a href='#projects' style='text-decoration: none'>Projects</a>
         </nav>
+
         <section id='about'>
-            <h1 class='heading'>About</h1>
-            <p>Hello! I'm Ignat (he/him). I always had an interest to technologies and have been fascinated by how IT quickly and sometimes dramatically changes our life.<br>
-            Technically a software developer can create something that has never existed before like an artist and it is exciting!<br>
-            I speak English and Russian.
-        </p>
+            <h2 class='heading'>About</h2>
+                <p>Hi! I am a software engineer with experience in front-end development. I always had an interest to technologies and have been fascinated by how IT quickly and sometimes dramatically change our life.
+                Technically an engineer can create something that has never existed before, like an artist do, and I find this very exciting!</p>
+                <p>I speak English and Russian.</p>
+                <p>Pronouns: <strong>he/him</strong></p>
         </section>
+
         <section id='experience'>
-            <h1 class='heading'>Experience</h1>
-            <p class='experience'>Code the Dream, student (2021 - present)</p>
-            <p class='experience'>Target Labs, QA engineer (2015 - 2021)</p>
-            <p class='experience'>Gazprom transgaz Yekaterinburg, supply manager (2006 - 2014)</p>
+            <h2 class='heading'>Experience</h2>
+            <p class='card'>Code the Dream, student<br>(2021 - present)</p>
+            <p class='card'>Target Labs, QA engineer<br>(2015 - 2021)</p>
+            <p class='card'>Gazprom transgaz Yekaterinburg, supply manager<br>(2006 - 2014)</p>
         </section>
+
         <section id='skills'>
-            <h1 class='heading'>Skills</h1>
+            <h2 class='heading'>Skills</h2>
         </section>
+
         <section id='projects'>
-            <h1 class='heading'>Projects</h1>
+            <h2 class='heading'>Projects</h2>
             <ul></ul>
         </section>
-        <section id="message_form">
-            <h2 class='heading'>Leave a Message</h2>
+
+        <section id='message_form'>
+            <h2 class='heading'>Leave a message</h2>
             <form class='form' id='leave_message'>
-                <label class='label' for='name'>Name  </label><input type='text' name='name' required=true><br>   
-                <label class='label' for='email'>E-mail  </label> <input type='email' name='email' required=true><br>
-                <label class='label' for='message'>Message</label><br>
-                <textarea name='message' required=true></textarea><br>
+                <div class='field field_inline'>
+                    <label class='field field_label' for='name'>Name</label>
+                    <input class='field field_input' type='text' name='name' required=true>
+                </div>
+                <div class='field field_inline'>   
+                    <label class='field field_label' for='email'>Email Address</label>
+                    <input class='field field_input' type='email' name='email' required=true>
+                </div>
+                <div>
+                    <label class='field field_label' for='message'>Message</label>
+                    <textarea class='field field_input' name='message' required=true></textarea>
+                </div>
                 <button class='submitButton' type='submit'>Submit</button><br>
             </form>
         </section>
+
         <section id='messages'>
             <h2 class='heading'>Messages</h2>
             <ul></ul>
         </section>
+
         <footer>
             <a href='https://www.linkedin.com/in/ignat-babenko-aa278899/' target="_blank "><img class='social_icons' src='img/linkedin.svg' alt='Linkedin'></a>
             <a href='https://github.com/dumpidum' target="_blank"><img class='social_icons' src='img/github.svg' alt='Github'></a>
             <a href='mailto:dumpidum@gmail.com' target="_blank"><img class='social_icons' src='img/mail.svg' alt='E-mail'></a>
         </footer>
     </div>
+
     <script src='js/index.js'></script>
 </body>
 

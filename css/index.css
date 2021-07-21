@@ -28,6 +28,15 @@ section {
     flex-grow: 1;
 }
 
+h1 {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 20px;
+}
+
 header {
     display: flex;
     position: static;
@@ -35,25 +44,26 @@ header {
     background-color: rgb(246, 254, 255);
     padding: 10px;
     border-radius: 10px;
-    margin: 5px;    
+    margin: 5px;
 }
 #avatar {
-    /* object-fit: cover; */
+    object-fit: cover;
     justify-self: left;
     border-radius:50%;
-    width: 100px;
-    height: 100px;
-    margin-right: 7px;
+    width: 90px;
+    height: 90px;
+    margin-right: 10px;
 }
 
-.heading {
-    color:rgb(0, 0, 0);
+ .heading {
+    color:rgb(147, 226, 255);
+
     font-weight: bold;
 }
 
-/* section {
-    margin-top:2em;
-} */
+p {
+    display: block;
+}
 nav {
     display: flex;
     position: sticky;
@@ -62,7 +72,7 @@ nav {
     background-color:rgb(217, 244, 254);
 }
 
-.experience {
+.card {
     align-content: initial;
     background-color: rgb(235, 235, 235);
     border: 1px;
@@ -84,36 +94,42 @@ nav {
     flex-wrap: wrap;
 }
 
-.project {
-    align-content: initial;
-    background-color: rgb(235, 235, 235);
-    border: 1px;
-    border-radius: 5px;
-    padding: 5px;
-}
-
-h2 {
-    font-size: 15px;
-}
-
-form {
-    padding: 10px;
-}
-
-label {
-    font-size: 13px;
-}
-
-input {
-    width: ;
+input, textarea {
+    font: inherit;
 }
 
 textarea {
-    width:fit-content;
+    width: 100%;
     height: 100px;
+    margin-bottom: 1rem;
 }
+.field {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.field_inline {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.field_input {
+    margin-bottom: 1rem;
+}
+
+.field_label,
+.field_input {
+  display: block;
+}
+
 button {
-    font-size: 16px;
+    font-family : inherit;
+    font-size: 1em;
     padding: 5px;
     border: 0px;
     border-radius: 5px;
@@ -121,12 +137,10 @@ button {
 
 .submitButton {
     background-color:lightskyblue;
-    border-radius: 5px;
 }
 
 .submitButton:hover {
     background-color: lightblue;
-    border-radius: 5px;
 }
 
 #editButton {
@@ -141,13 +155,30 @@ button {
 
 #removeButton {
     background-color: coral;
-    border-radius: 5px;
 }
 
 #removeButton:hover {
     background-color: rgb(255, 160, 125);
-    border-radius: 5px;
 }
+
+#topButton {
+    display: none;
+    position: fixed;
+    bottom: 46px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: lightskyblue;
+    color: black;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  #topButton:hover {
+    background-color: lightblue;
+  }
 
 footer {
     display: flex;
@@ -160,30 +191,13 @@ footer {
     padding: 10px;
 }
 
-/* @media screen and (max-width: 480px) {
-    
-    .experience {
-        width: 100%;
+
+@media screen and (min-width: 1404px) {
+    .field {
+        width: 32rem;
     }
     
-    input {
-        width: 100%;
+    .field_inline {
+        width:15.4rem;
     }
-
-    textarea {
-        width: 100%;
-    }
-
-} */
-
-/* @media screen and (max-width: 768px) {
-    
 }
-
-@media screen and (max-width: 1024px) {
-    
-}
-
-@media screen and (max-width: 1200px) {
-    
-} */

@@ -1,4 +1,4 @@
-//adding copyright text in the footer
+// adding copyright text in the footer
 let today = new Date();
 let thisYear = today.getFullYear();
 let footer = document.querySelector('footer');
@@ -9,7 +9,8 @@ copyright.style.marginLeft = 'auto';
 let contacts = document.createElement('span');
 footer.appendChild(copyright);
 
-//adding 'Skills' section
+
+// adding 'Skills' section
 let skills = ['JavaScript', 'HTML', 'CSS'];
 let skillsSection = document.getElementById('skills');
 for (let i = 0; i < skills.length; i++) {
@@ -19,7 +20,8 @@ for (let i = 0; i < skills.length; i++) {
     skillsSection.appendChild(skill);
 }
 
-// lesson 4-3
+
+// 'Message' form handler
 let messageSection = document.getElementById('messages');
 let messageList = messageSection.querySelector('ul');
 
@@ -36,19 +38,19 @@ messageForm.addEventListener('submit', (event) => {
     newMessage.classList.add('message');
     newMessage.innerHTML = `<a href="mailto:${email.value}">${name.value}</a> wrote: <span>${message.value} </span><br>`;
     
-    //declaring 'edit' button
+    // declaring 'edit' button
     let editButton = document.createElement('button');
     editButton.innerText = 'edit';
     editButton.type = 'button';
     editButton.id = 'editButton';
 
-    //declaring 'remove' button
+    // declaring 'remove' button
     let removeButton = document.createElement('button');
     removeButton.innerText = 'remove';
     removeButton.type = 'button';
     removeButton.id = 'removeButton';
 
-    //adding the buttons and a message
+    // adding the buttons and a message
     newMessage.appendChild(editButton);
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
@@ -57,11 +59,7 @@ messageForm.addEventListener('submit', (event) => {
 })
 
 
-     
-        // if (list.childNodes.length <= 1) {
-        // messageSection.style.display = 'none';
-
-    //buttons handler
+// 'Messages' buttons handler
 messageList.addEventListener('click', (event) => {
     if (event.target.tagName === 'BUTTON') {
         let li = event.target.parentNode;
@@ -89,6 +87,7 @@ messageList.addEventListener('click', (event) => {
     }
 })
 
+
 // var githubRequest = new XMLHttpRequest();
 // githubRequest.open('GET', 'https://api.github.com/users/dumpidum/repos');
 // githubRequest.send();
@@ -105,6 +104,8 @@ messageList.addEventListener('click', (event) => {
     
 // })
 
+
+// fetching repos from GitHub and creating a list
 fetch('https://api.github.com/users/dumpidum/repos')
     .then(response => {
         if (!response.ok) {
@@ -118,7 +119,7 @@ fetch('https://api.github.com/users/dumpidum/repos')
             let projectSection = document.getElementById('projects');            
             for (let i = 0; i < data.length; i++) {
                 let project = document.createElement('p');
-                project.className='project';
+                project.className='card';
                 project.innerHTML=`<a href='${data[i].html_url}' target='_blank'>${data[i].name}</a> created on ${data[i].created_at.slice(0,10)}`;
                 projectSection.appendChild(project);
             }
@@ -131,20 +132,22 @@ fetch('https://api.github.com/users/dumpidum/repos')
     })
 
 
+// 'Back to top' button handler
+var mybutton = document.getElementById("topButton");
 
+// when the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
 
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
 
-
-
-
-
-
-//     removeButton.addEventListener('click', (event) => {
-//     let entry = event.target.parentNode;
-//     let list = message.parentNode;
-    // if (messageList.childNodes.length <= 1) {
-    // messageSection.style.display = 'none';
-    // }
-
-
-//     entry.remove();
+// when the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
