@@ -16,12 +16,16 @@ body {
     margin:5px
 }
 
-section {
+section,
+header {
     background-color: rgb(246, 254, 255);
-    padding: 20px;
     border-radius: 10px;
-    text-align: justify;
     margin: 5px;
+}
+
+section {
+    padding: 20px;
+    text-align: justify;
 }
 
 .container {
@@ -41,11 +45,9 @@ header {
     display: flex;
     position: static;
     align-items: center;
-    background-color: rgb(246, 254, 255);
     padding: 10px;
-    border-radius: 10px;
-    margin: 5px;
 }
+
 #avatar {
     object-fit: cover;
     justify-self: left;
@@ -64,6 +66,7 @@ header {
 p {
     display: block;
 }
+
 nav {
     display: flex;
     position: sticky;
@@ -75,17 +78,22 @@ nav {
 .card {
     align-content: initial;
     background-color: rgb(235, 235, 235);
-    border: 1px;
-    border-radius: 5px;
     padding: 5px;
+}
+
+.card,
+.skill,
+input,
+textarea {
+    border-radius: 5px;
+    border-width: 1px;
 }
 
 .skill {
     color: blue;
     background-color: rgb(255, 255, 255, 0);
     border: 1px solid blue;
-    border-radius: 5px;
-    margin-right: 10px;
+    margin-right: 1rem;
     padding: 5px;
     display: inline-block;
 }
@@ -103,6 +111,7 @@ textarea {
     height: 100px;
     margin-bottom: 1rem;
 }
+
 .field {
     display: block;
     max-width: 100%;
@@ -150,7 +159,6 @@ button {
 
 #editButton:hover {
     background-color:papayawhip;
-    margin-right: 0.5em;
 }
 
 #removeButton {
@@ -171,14 +179,15 @@ button {
     outline: none;
     background-color: lightskyblue;
     color: black;
+    font-weight:bold;
     cursor: pointer;
     padding: 5px;
     border-radius: 5px;
-  }
+}
   
   #topButton:hover {
     background-color: lightblue;
-  }
+}
 
 footer {
     display: flex;
@@ -188,7 +197,7 @@ footer {
 }
 
 .social_icons {
-    padding: 10px;
+    padding: 5px;
 }
 
 
